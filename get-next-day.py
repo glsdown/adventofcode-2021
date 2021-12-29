@@ -95,9 +95,9 @@ def prepare_new_day():
     next_day = get_next_day()
 
     # Check if the files exist already
-    python_file = HERE / f"day-{next_day}.py"
-    input_file = HERE / "inputs" / f"day-{next_day}.txt"
-    test_input_file = HERE / "input-tests" / f"day-{next_day}.txt"
+    python_file = HERE / f"day-{next_day:02}.py"
+    input_file = HERE / "inputs" / f"day-{next_day:02}.txt"
+    test_input_file = HERE / "input-tests" / f"day-{next_day:02}.txt"
     if python_file.exists():
         raise FileExistsError(f"{input_file} already exists")
     elif test_input_file.exists():
